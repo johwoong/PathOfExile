@@ -45,6 +45,27 @@
     <Filter Include="Engine\05. Scene\Scene_Tool">
       <UniqueIdentifier>{3120fdc1-ec26-4fdc-b01c-dd2a54f48dcf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\04. Object\Player">
+      <UniqueIdentifier>{227cf8fb-5176-4c47-8c21-61f5aacf0dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04. Object\Monster">
+      <UniqueIdentifier>{382e5e39-454d-4e4e-850e-b7849897184a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04. Object\Missile">
+      <UniqueIdentifier>{8d3bc1cb-da35-4986-805a-5dc26ec5863c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Resource">
+      <UniqueIdentifier>{307832c8-c986-4f9b-8d8a-2f2dee626fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Resource\Texture">
+      <UniqueIdentifier>{1e5525ca-5540-41ab-a4a2-dad391c7546d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Resource\Sound">
+      <UniqueIdentifier>{818f9cfb-b916-4008-b8f5-d978f46233c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\PathMgr">
+      <UniqueIdentifier>{e8c57e54-84e0-455e-bc80-1215874dba4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CCore.h">
@@ -87,6 +108,27 @@
     <ClInclude Include="CScene.h">
       <Filter>Engine\05. Scene</Filter>
     </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Engine\04. Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonster.h">
+      <Filter>Engine\04. Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="CMissile.h">
+      <Filter>Engine\04. Object\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="CRes.h">
+      <Filter>Engine\05. Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>Engine\05. Resource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="CSound.h">
+      <Filter>Engine\05. Resource\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="CPathMgr.h">
+      <Filter>Engine\03. Manager\PathMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CCore.cpp">
@@ -112,6 +154,30 @@
     </ClCompile>
     <ClCompile Include="CScene.cpp">
       <Filter>Engine\05. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Engine\04. Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonster.cpp">
+      <Filter>Engine\04. Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="CMissile.cpp">
+      <Filter>Engine\04. Object\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource.cpp">
+      <Filter>Default\소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CRes.cpp">
+      <Filter>Engine\05. Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>Engine\05. Resource\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="CSound.cpp">
+      <Filter>Engine\05. Resource\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="CPathMgr.cpp">
+      <Filter>Engine\03. Manager\PathMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

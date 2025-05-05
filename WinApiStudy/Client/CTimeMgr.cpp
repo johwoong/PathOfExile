@@ -33,6 +33,10 @@ void CTimeMgr::update()
 	// 이전 카운트 값을 현재값으로 갱신(다음번에 계산을 위해서)
 	m_llPrevCount = m_llCurCount;
 
+}
+
+void CTimeMgr::render()
+{
 	++m_iCallCount;
 	m_dAcc += m_dDT; // DT 누적
 	if (m_dAcc >= 1.) // 1초에 한번씩
@@ -40,7 +44,7 @@ void CTimeMgr::update()
 		m_iFPS = m_iCallCount;
 		m_dAcc = 0.;
 		m_iCallCount = 0;
-		
+
 		wchar_t szBuffer[255] = {};
 		swprintf_s(szBuffer, L"FPS : %d, DT : %f", m_iFPS, m_dDT);
 		SetWindowText(CCore::GetInst()->GetMainHwnd(), szBuffer);

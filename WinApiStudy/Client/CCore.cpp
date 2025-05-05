@@ -4,8 +4,9 @@
 #include "CTimeMgr.h"
 #include "KeyManager.h"
 #include "SceneManager.h"
+#include "CPathMgr.h"
 
-CCore::CCore() : m_hWnd(0), m_ptResoulution{}, m_hDC(0), m_hBit(0), m_memDC(0)
+CCore::CCore() : m_hWnd(0), m_ptResolution{}, m_hDC(0), m_hBit(0), m_memDC(0)
 {
 }
 
@@ -21,9 +22,9 @@ CCore::~CCore()
 int CCore::Init(HWND _hWnd, POINT _ptResolution)
 {
 	m_hWnd = _hWnd;
-	m_ptResoulution = _ptResolution;
+	m_ptResolution = _ptResolution;
 	// 해상도에 맞게 윈도우 크기 조정
-	RECT rt = {0, 0, m_ptResoulution.x, m_ptResoulution.y};
+	RECT rt = {0, 0, m_ptResolution.x, m_ptResolution.y};
 	AdjustWindowRect(&rt, WS_OVERLAPPEDWINDOW, true);
 	SetWindowPos(_hWnd, nullptr, 100, 100, rt.right - rt.left, rt.bottom - rt.top, 0);
 
@@ -31,13 +32,14 @@ int CCore::Init(HWND _hWnd, POINT _ptResolution)
 
 
 	// 이중 버퍼링 용도의 비트맵과 DC를 만든다.
-	m_hBit = CreateCompatibleBitmap(m_hDC, m_ptResoulution.x, m_ptResoulution.y);
+	m_hBit = CreateCompatibleBitmap(m_hDC, m_ptResolution.x, m_ptResolution.y);
 	m_memDC = CreateCompatibleDC(m_hDC);
 
 	HBITMAP hOldBit = (HBITMAP)SelectObject(m_memDC, m_hBit);
 	DeleteObject(hOldBit);
 
 	// Manager 초기화
+	CPathMgr::GetInst()->init();
 	CTimeMgr::GetInst()->init();
 	KeyManager::GetInst()->init();
 	SceneManager::GetInst()->init();
@@ -58,10 +60,12 @@ void CCore::Update()
 	// Rendering
 	// ============
 	// 화면 Clear
-	Rectangle(m_memDC, -1, -1, m_ptResoulution.x + 1, m_ptResoulution.y + 1);
+	Rectangle(m_memDC, -1, -1, m_ptResolution.x + 1, m_ptResolution.y + 1);
 
 	SceneManager::GetInst()->render(m_memDC);
-	BitBlt(m_hDC, 0, 0, m_ptResoulution.x, m_ptResoulution.y, m_memDC, 0, 0, SRCCOPY);
+	BitBlt(m_hDC, 0, 0, m_ptResolution.x, m_ptResolution.y, m_memDC, 0, 0, SRCCOPY);
+
+	//CTimeMgr::GetInst()->render();
 }
 
 

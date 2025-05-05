@@ -1,7 +1,5 @@
 #include "pch.h"
 #include "CObject.h"
-#include "KeyManager.h"
-#include "CTimeMgr.h"
 
 CObject::CObject() : m_vPos{}, m_vScale{}
 {
@@ -11,29 +9,6 @@ CObject::CObject() : m_vPos{}, m_vScale{}
 CObject::~CObject()
 {
 
-}
-
-void CObject::update()
-{
-	if (KeyManager::GetInst()->GetKeyState(KEY::W) == KEY_STATE::HOLD)
-	{
-		m_vPos.y -= 200.0f * fDT;
-	}
-
-	if (KeyManager::GetInst()->GetKeyState(KEY::S) == KEY_STATE::HOLD)
-	{
-		m_vPos.y += 200.0f * fDT
-	}
-
-	if (KeyManager::GetInst()->GetKeyState(KEY::A) == KEY_STATE::HOLD)
-	{
-		m_vPos.x -= 200.0f * fDT
-	}
-
-	if (KeyManager::GetInst()->GetKeyState(KEY::D) == KEY_STATE::HOLD)
-	{
-		m_vPos.x += 200.0f * fDT
-	}
 }
 
 void CObject::render(HDC _dc)
