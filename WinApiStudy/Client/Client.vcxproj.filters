@@ -27,6 +27,24 @@
     <Filter Include="Engine\04. Object">
       <UniqueIdentifier>{a13c94c5-ea37-49a3-9180-c7f94bee0764}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager\KeyMgr">
+      <UniqueIdentifier>{254f3cd2-2963-47b3-bbff-6739e3171c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\TimeMgr">
+      <UniqueIdentifier>{f06bcf97-eddd-4bb6-9865-995b828bc8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Scene">
+      <UniqueIdentifier>{0739d045-1e80-44f7-bc58-c726e09c1507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\SceneMgr">
+      <UniqueIdentifier>{a655cdff-fd35-4d5c-8b3a-b8cb8218a906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Scene\Scene_Start">
+      <UniqueIdentifier>{47145fa9-692a-48b6-a0e9-d05ded07211f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\05. Scene\Scene_Tool">
+      <UniqueIdentifier>{3120fdc1-ec26-4fdc-b01c-dd2a54f48dcf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CCore.h">
@@ -48,11 +66,26 @@
       <Filter>Engine\01.Header</Filter>
     </ClInclude>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="KeyManager.h">
-      <Filter>Engine\03. Manager</Filter>
-    </ClInclude>
     <ClInclude Include="CObject.h">
       <Filter>Engine\04. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>Engine\01.Header</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>Engine\03. Manager\KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeMgr.h">
+      <Filter>Engine\03. Manager\TimeMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Engine\03. Manager\SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene_Start.h">
+      <Filter>Engine\05. Scene\Scene_Start</Filter>
+    </ClInclude>
+    <ClInclude Include="CScene.h">
+      <Filter>Engine\05. Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -62,11 +95,23 @@
     <ClCompile Include="main.cpp">
       <Filter>Default</Filter>
     </ClCompile>
-    <ClCompile Include="KeyManager.cpp">
-      <Filter>Engine\03. Manager</Filter>
-    </ClCompile>
     <ClCompile Include="CObject.cpp">
       <Filter>Engine\04. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>Engine\03. Manager\KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeMgr.cpp">
+      <Filter>Engine\03. Manager\TimeMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Engine\03. Manager\SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene_Start.cpp">
+      <Filter>Engine\05. Scene\Scene_Start</Filter>
+    </ClCompile>
+    <ClCompile Include="CScene.cpp">
+      <Filter>Engine\05. Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

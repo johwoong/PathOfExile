@@ -91,9 +91,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,  // 실행된 프로세스의 �
             // 디자인 패턴(설계 유형)
             // 싱글톤 패턴
             CCore::GetInst()->Update();
+            
         }
-
-
     }
 
 

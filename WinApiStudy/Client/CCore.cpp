@@ -1,15 +1,20 @@
 #include "pch.h"
 #include "CCore.h"
 #include "CObject.h"
-CObject g_obj;
+#include "CTimeMgr.h"
+#include "KeyManager.h"
+#include "SceneManager.h"
 
-CCore::CCore() : m_hWnd(0), m_ptResoulution{}, m_hDC(0)
+CCore::CCore() : m_hWnd(0), m_ptResoulution{}, m_hDC(0), m_hBit(0), m_memDC(0)
 {
 }
 
 CCore::~CCore()
 {
 	ReleaseDC(m_hWnd, m_hDC);
+
+	DeleteDC(m_memDC);
+	DeleteObject(m_hBit);
 }
 
 
@@ -24,45 +29,41 @@ int CCore::Init(HWND _hWnd, POINT _ptResolution)
 
 	m_hDC = GetDC(m_hWnd); // DC활용해서 그림을 그려야해
 
-	g_obj.m_ptPos = POINT{ m_ptResoulution.x / 2, m_ptResoulution.y / 2};
-	g_obj.m_ptScale = POINT{ 100, 100 };
-	return 0;
+
+	// 이중 버퍼링 용도의 비트맵과 DC를 만든다.
+	m_hBit = CreateCompatibleBitmap(m_hDC, m_ptResoulution.x, m_ptResoulution.y);
+	m_memDC = CreateCompatibleDC(m_hDC);
+
+	HBITMAP hOldBit = (HBITMAP)SelectObject(m_memDC, m_hBit);
+	DeleteObject(hOldBit);
+
+	// Manager 초기화
+	CTimeMgr::GetInst()->init();
+	KeyManager::GetInst()->init();
+	SceneManager::GetInst()->init();
+
+	return S_OK;
 }
 
 void CCore::Update()
 {
-	static int callcount = 0;
-	++callcount;
-	static int iPrevCount = GetTickCount();
+	// Manager Update
+	CTimeMgr::GetInst()->update();
+	// KeyManager Update
+	KeyManager::GetInst()->update();
+	// SceneManager Update
+	SceneManager::GetInst()->update();
 
-	int iCurCount = GetTickCount();
-	if (iCurCount - iPrevCount > 1000) // 1초마다 한번씩 실행
-	{
-		iPrevCount = iCurCount;
-		callcount = 0;
-	}
-	update();
-	render();
+	// ============
+	// Rendering
+	// ============
+	// 화면 Clear
+	Rectangle(m_memDC, -1, -1, m_ptResoulution.x + 1, m_ptResoulution.y + 1);
+
+	SceneManager::GetInst()->render(m_memDC);
+	BitBlt(m_hDC, 0, 0, m_ptResoulution.x, m_ptResoulution.y, m_memDC, 0, 0, SRCCOPY);
 }
 
-void CCore::update() // 물체의 변경점 체크
-{
-	// 비동기 키 입출력 함수 - 키가 눌리는 순간에 바로체크
-	if (GetAsyncKeyState(VK_LEFT) & 0x8000)
-	{
-		g_obj.m_ptPos.x -= 1;
-	}
 
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
-	{
-		g_obj.m_ptPos.x += 1;
-	}
-}
 
-void CCore::render() // 처리되는속도가빠름
-{	// 그리기
-	Rectangle(m_hDC, g_obj.m_ptPos.x - g_obj.m_ptScale.x / 2, 
-		g_obj.m_ptPos.y - g_obj.m_ptScale.y / 2,
-		g_obj.m_ptPos.x + g_obj.m_ptScale.x / 2, 
-		g_obj.m_ptPos.y + g_obj.m_ptScale.y / 2);
-}
+
