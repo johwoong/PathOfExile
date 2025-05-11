@@ -2,10 +2,8 @@
 #include "CTexture.h"
 #include "CCore.h"
 
-
 CTexture::CTexture() : m_hBit(0), m_dc(0), m_bitInfo{}
 {
-
 }
 
 CTexture::~CTexture()
@@ -27,6 +25,5 @@ void CTexture::Load(const wstring& _strFilePath)
 	DeleteObject(hPrevBit);
 
 	// ∫Ò∆Æ∏  ¡§∫∏
-	GetObject(m_hBit,sizeof(BITMAP), &m_bitInfo);
-
+	GetObject(m_hBit, sizeof(BITMAP), &m_bitInfo);
 }

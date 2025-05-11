@@ -1,26 +1,23 @@
 #pragma once
 #include "CObject.h"
 class CMonster :
-    public CObject
+	public CObject
 {
 private:
-    Vec2 m_vCenterPos;
-    float m_fSpeed;
-    float m_fMaxDistance;
-    int m_iDir; // 1, -1
+	Vec2 m_vCenterPos;
+	float m_fSpeed;
+	float m_fMaxDistance;
+	int m_iDir; // 1, -1
 
 public:
-    float GetSpeed() { return m_fSpeed; }
-    void SetSpeed(float _f) { m_fSpeed = _f; }
-    void SetMoveDistacne(float _f) { m_fMaxDistance = _f; }
-    void SetCenterPos(Vec2 _vPos) { m_vCenterPos = _vPos; }
+	float GetSpeed() { return m_fSpeed; }
+	void SetSpeed(float _f) { m_fSpeed = _f; }
+	void SetMoveDistacne(float _f) { m_fMaxDistance = _f; }
+	void SetCenterPos(Vec2 _vPos) { m_vCenterPos = _vPos; }
 public:
-    virtual void update();
+	virtual void update();
 
 public:
-    CMonster();
-    ~CMonster();
-
-    
+	CMonster();
+	~CMonster();
 };
-

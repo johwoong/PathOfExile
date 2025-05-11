@@ -8,8 +8,6 @@ private:\
 	Type();\
 	~Type();
 
-
-
 #define fDT CTimeMgr::GetInst()->GetfDT();
 #define DT CTimeMgr::GetInst()->GetDT();
 #define KEY_CHECK(key, state) KeyManager::GetInst()->GetKeyState(key) == state
@@ -36,4 +34,18 @@ enum class SCENE_TYPE
 	STAGE_01,
 	STAGE_02,
 	END,
+};
+
+enum class BRUSH_TYPE
+{
+	HOLLOW,
+	END,
+};
+
+enum class PEN_TYPE
+{
+	RED,
+	GREEN,
+	BLUE,
+	END
 };

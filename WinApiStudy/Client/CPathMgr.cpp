@@ -3,20 +3,17 @@
 #include "CCore.h"
 CPathMgr::CPathMgr() : m_szContentPath{}
 {
-
 }
 
 CPathMgr::~CPathMgr()
 {
-
 }
-
 
 void CPathMgr::init()
 {
 	GetCurrentDirectory(255, m_szContentPath);
 
-	int iLen = wcslen(m_szContentPath);
+	int iLen = (int)wcslen(m_szContentPath);
 
 	// 상위 폴더로
 	for (int i = iLen - 1; i >= 0; --i)
@@ -31,7 +28,6 @@ void CPathMgr::init()
 	wcscat_s(m_szContentPath, 255, L"\\bin\\content\\");
 
 	// + bin \\content\\
-	
 
 	//SetWindowText(CCore::GetInst()->GetMainHwnd(), m_szContentPath);
 }

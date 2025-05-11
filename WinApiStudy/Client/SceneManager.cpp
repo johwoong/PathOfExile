@@ -4,7 +4,6 @@
 
 SceneManager::SceneManager() :m_arrScene{}, m_pCurScene(nullptr)
 {
-
 }
 
 SceneManager::~SceneManager()
@@ -37,7 +36,9 @@ void SceneManager::init()
 void SceneManager::update()
 {
 	m_pCurScene->update();
+	m_pCurScene->finalupdate();
 }
+
 
 void SceneManager::render(HDC _dc)
 {

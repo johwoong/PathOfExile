@@ -16,4 +16,3 @@ public:
 public:
 	CScene* GetCurScene() { return m_pCurScene; }
 };
-

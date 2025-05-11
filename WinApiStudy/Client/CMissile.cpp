@@ -5,11 +5,11 @@
 CMissile::CMissile() : m_fTheta(PI / 4.f), m_vDir(Vec2(1.f, 1.f))
 {
 	m_vDir.Normalize();
+	CreateColider();
 }
 
 CMissile::~CMissile()
 {
-
 }
 
 void CMissile::update()
@@ -31,4 +31,3 @@ void CMissile::render(HDC _dc)
 	Ellipse(_dc, (int)(vPos.x - vScale.x / 2.f), (int)(vPos.y - vScale.y / 2.f),
 		(int)(vPos.x + vScale.x / 2.f), (int)(vPos.y + vScale.y / 2.f));
 }
-

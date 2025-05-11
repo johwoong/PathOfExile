@@ -2,8 +2,7 @@
 #include "KeyManager.h"
 #include "CCore.h"
 
-
-int g_arrVK[(int)KEY::LAST] = 
+int g_arrVK[(int)KEY::LAST] =
 {
 	VK_LEFT,
 	VK_RIGHT,
@@ -39,19 +38,17 @@ int g_arrVK[(int)KEY::LAST] =
 
 KeyManager::KeyManager()
 {
-
 }
 
 KeyManager::~KeyManager()
 {
-
 }
 
 void KeyManager::init()
 {
 	for (int i = 0; i < (int)KEY::LAST; ++i)
 	{
-		m_vecKey.push_back(tKeyInfo{KEY_STATE::NONE, false});
+		m_vecKey.push_back(tKeyInfo{ KEY_STATE::NONE, false });
 	}
 }
 
@@ -62,7 +59,6 @@ void KeyManager::update()
 
 	HWND hWnd = GetFocus();
 
-	
 	// 윈도우 포커싱 중일 때 키 이벤트 동작
 	if (nullptr != hWnd)
 	{
@@ -116,5 +112,4 @@ void KeyManager::update()
 			}
 		}
 	}
-
 }

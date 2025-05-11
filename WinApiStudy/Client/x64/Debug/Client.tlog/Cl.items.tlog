@@ -1,3 +1,5 @@
+C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\CColider.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\CColider.obj
+C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\CCollisionMgr.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\CCollisionMgr.obj
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\CCore.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\CCore.obj
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\CMissile.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\CMissile.obj
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\CMonster.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\CMonster.obj
@@ -13,4 +15,6 @@ C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\CTimeMgr.cpp;C:\Us
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\KeyManager.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\KeyManager.obj
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\main.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\main.obj
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\Resource.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\Resource.obj
+C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\ResourceManager.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\ResourceManager.obj
 C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\SceneManager.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\SceneManager.obj
+C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\SelectGDI.cpp;C:\Users\조한웅\Desktop\Git\PathOfExile\WinApiStudy\Client\x64\Debug\SelectGDI.obj

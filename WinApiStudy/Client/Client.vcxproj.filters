@@ -54,17 +54,29 @@
     <Filter Include="Engine\04. Object\Missile">
       <UniqueIdentifier>{8d3bc1cb-da35-4986-805a-5dc26ec5863c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\05. Resource">
-      <UniqueIdentifier>{307832c8-c986-4f9b-8d8a-2f2dee626fc6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\05. Resource\Texture">
-      <UniqueIdentifier>{1e5525ca-5540-41ab-a4a2-dad391c7546d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\05. Resource\Sound">
-      <UniqueIdentifier>{818f9cfb-b916-4008-b8f5-d978f46233c6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\03. Manager\PathMgr">
       <UniqueIdentifier>{e8c57e54-84e0-455e-bc80-1215874dba4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\ResMgr">
+      <UniqueIdentifier>{1b60e6a6-48e1-4ae1-9075-4a9a803e0ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\07. Component">
+      <UniqueIdentifier>{2083e726-9a7e-44a3-92ea-5e33e6b024c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\06.Resource">
+      <UniqueIdentifier>{307832c8-c986-4f9b-8d8a-2f2dee626fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\06.Resource\Texture">
+      <UniqueIdentifier>{1e5525ca-5540-41ab-a4a2-dad391c7546d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\06.Resource\Sound">
+      <UniqueIdentifier>{818f9cfb-b916-4008-b8f5-d978f46233c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Module">
+      <UniqueIdentifier>{30ece21d-199a-4e92-9ce1-d12f6195c171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\03. Manager\ColiderMgr">
+      <UniqueIdentifier>{14f73a3c-0b89-42f7-af9d-229466b1f9ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -118,16 +130,28 @@
       <Filter>Engine\04. Object\Missile</Filter>
     </ClInclude>
     <ClInclude Include="CRes.h">
-      <Filter>Engine\05. Resource</Filter>
+      <Filter>Engine\06.Resource</Filter>
     </ClInclude>
     <ClInclude Include="CTexture.h">
-      <Filter>Engine\05. Resource\Texture</Filter>
+      <Filter>Engine\06.Resource\Texture</Filter>
     </ClInclude>
     <ClInclude Include="CSound.h">
-      <Filter>Engine\05. Resource\Sound</Filter>
+      <Filter>Engine\06.Resource\Sound</Filter>
     </ClInclude>
     <ClInclude Include="CPathMgr.h">
       <Filter>Engine\03. Manager\PathMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Engine\03. Manager\ResMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="CColider.h">
+      <Filter>Engine\07. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectGDI.h">
+      <Filter>Engine\08. Module</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollisionMgr.h">
+      <Filter>Engine\03. Manager\ColiderMgr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -168,16 +192,28 @@
       <Filter>Default\소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="CRes.cpp">
-      <Filter>Engine\05. Resource</Filter>
+      <Filter>Engine\06.Resource</Filter>
     </ClCompile>
     <ClCompile Include="CTexture.cpp">
-      <Filter>Engine\05. Resource\Texture</Filter>
+      <Filter>Engine\06.Resource\Texture</Filter>
     </ClCompile>
     <ClCompile Include="CSound.cpp">
-      <Filter>Engine\05. Resource\Sound</Filter>
+      <Filter>Engine\06.Resource\Sound</Filter>
     </ClCompile>
     <ClCompile Include="CPathMgr.cpp">
       <Filter>Engine\03. Manager\PathMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Engine\03. Manager\ResMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CColider.cpp">
+      <Filter>Engine\07. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectGDI.cpp">
+      <Filter>Engine\08. Module</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollisionMgr.cpp">
+      <Filter>Engine\03. Manager\ColiderMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

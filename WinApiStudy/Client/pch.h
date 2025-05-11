@@ -3,6 +3,7 @@
 #include "Windows.h"
 #include <iostream>
 #include <vector>
+#include <map>
 #include <string>
 #include <assert.h>
 
@@ -12,4 +13,3 @@ using namespace std;
 
 #include "define.h"
 #include "struct.h"
-
